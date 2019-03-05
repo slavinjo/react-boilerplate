@@ -4,7 +4,7 @@ import './Backdrop.css';
 const backdrop = (props) => {
     if(props.visible)
     return (
-      <div className="backdrop" onClick={props.clicker}/>
+      <div className="backdrop" onClick={props.handleClick}/>
     );
     return null;
 }

@@ -15,9 +15,6 @@ const sideDrawer = props => {
             </ul>
         </nav>
     );
-
-
-
 }
 
 export default sideDrawer;

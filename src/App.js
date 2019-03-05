@@ -24,8 +24,8 @@ class App extends Component {
    */}
     return (
       <div style={{ height: '100%' }}>
-        <Toolbar clicker={this.clickHandler} />
-        <Backdrop visible={this.state.isSidebarVisible} clicker={this.clickHandler} />
+        <Toolbar handleClick={this.clickHandler} />
+        <Backdrop visible={this.state.isSidebarVisible} handleClick={this.clickHandler} />
         <SideDrawer visible={this.state.isSidebarVisible} />
         <main style={{ marginTop: '64px' }}>
           <p>Ovo je stranica</p>
