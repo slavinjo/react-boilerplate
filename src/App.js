@@ -1,25 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Toolbar from './components/Toolbar/Toolbar';
+import SideDrawer from './components/SideDrawer/SideDrawer';
+import Backdrop from './components/Backdrop/Backdrop';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isSidebarVisible: false };
+  }
+
+
+  clickHandler = () => {
+    this.setState((prevState) => {
+      return { isSidebarVisible: !prevState.isSidebarVisible }
+    });
+  }
+
   render() {
+    {/*  let sideBar;
+    if (this.state.isSidebarVisible)
+      sideBar = <SideDrawer visible={this.state.isSidebarVisible} />
+   */}
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div style={{ height: '100%' }}>
+        <Toolbar clicker={this.clickHandler} />
+        <Backdrop visible={this.state.isSidebarVisible} clicker={this.clickHandler} />
+        <SideDrawer visible={this.state.isSidebarVisible} />
+        <main style={{ marginTop: '64px' }}>
+          <p>Ovo je stranica</p>
+        </main>
+        <Footer clicker={this.clickHandler} />
       </div>
     );
   }
