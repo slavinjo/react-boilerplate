@@ -3,6 +3,7 @@ import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Footer from './components/Footer/Footer';
+import Main from './components/Main/Main';
 
 class App extends Component {
   constructor(props) {
@@ -27,9 +28,7 @@ class App extends Component {
         <Toolbar handleClick={this.clickHandler} />
         <Backdrop visible={this.state.isSidebarVisible} handleClick={this.clickHandler} />
         <SideDrawer visible={this.state.isSidebarVisible} />
-        <main style={{ marginTop: '64px' }}>
-          <p>Ovo je stranica</p>
-        </main>
+        <Main />
         <Footer clicker={this.clickHandler} />
       </div>
     );
