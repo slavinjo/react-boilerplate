@@ -8,7 +8,7 @@ import Contact from '../../pages/Contact/Contact';
 import { Route, Switch } from 'react-router-dom';
 
 
-const main = (props) => {
+const Main = (props) => {
     return (
         <main className="main">
         {/*<p>Neki paragraf</p>
@@ -23,4 +23,4 @@ const main = (props) => {
     );
 }
 
-export default main;
+export default Main;

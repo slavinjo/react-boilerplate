@@ -5,7 +5,7 @@ import Backdrop from '../Backdrop/Backdrop';
 import Footer from '../Footer/Footer';
 import Main from '../Main/Main';
 
-class mainContent extends React.Component {
+class MainContent extends React.Component {
     constructor(props) {
         super(props);
         this.state = { isSidebarVisible: false };
@@ -30,4 +30,4 @@ class mainContent extends React.Component {
     };
 }
 
-export default mainContent;
+export default MainContent;
