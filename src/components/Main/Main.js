@@ -15,7 +15,7 @@ const Main = (props) => {
            {props.children}
         */}
             <Switch>
-                <Route path="/" component={Home} />
+                <Route path="/" exact component={Home} />
                 <Route path="/stuff" component={Stuff} />
                 <Route path="/contact" component={Contact} />
             </Switch>

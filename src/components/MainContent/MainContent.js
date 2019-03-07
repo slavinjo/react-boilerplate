@@ -24,7 +24,7 @@ class MainContent extends React.Component {
                 <Backdrop visible={this.state.isSidebarVisible} handleClick={this.clickHandler} />
                 <SideDrawer visible={this.state.isSidebarVisible} />
                 <Main />
-                <Footer clickHandler={this.clickHandler} />
+                <Footer handleClick={this.clickHandler} />
             </div>
         )
     };
