@@ -5,29 +5,28 @@ import Backdrop from '../Backdrop/Backdrop';
 import Footer from '../Footer/Footer';
 import Main from '../Main/Main';
 
-import { Route } from 'react-router-dom';
-
 class mainContent extends React.Component {
     constructor(props) {
-      super(props);
-      this.state = { isSidebarVisible: false };
+        super(props);
+        this.state = { isSidebarVisible: false };
     }
-  
+
     clickHandler = () => {
         this.setState((prevState) => {
-          return { isSidebarVisible: !prevState.isSidebarVisible }
+            return { isSidebarVisible: !prevState.isSidebarVisible }
         });
-      }
-    
+    }
+
     render() {
-      return ( <div style={{ height: '100%' }}>
-            <Toolbar handleClick={this.clickHandler} />
-            <Backdrop visible={this.state.isSidebarVisible} handleClick={this.clickHandler} />
-            <SideDrawer visible={this.state.isSidebarVisible} />
-            <Main> <p>Neki paragsraf</p></Main>
-            <Footer clicker={this.clickHandler} />
-        </div>
-      )
+        return (
+            <div style={{ height: '100%' }}>
+                <Toolbar handleClick={this.clickHandler} />
+                <Backdrop visible={this.state.isSidebarVisible} handleClick={this.clickHandler} />
+                <SideDrawer visible={this.state.isSidebarVisible} />
+                <Main/>
+                <Footer clicker={this.clickHandler} />
+            </div>
+        )
     };
 }
 
