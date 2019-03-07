@@ -3,7 +3,7 @@ import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import './Toolbar.css';
 import { NavLink } from "react-router-dom";
 
-const toolbar = (props) => {
+const Toolbar = (props) => {
     return (
         <header className="toolbar">
             <nav className="toolbar__navigation">
@@ -24,4 +24,4 @@ const toolbar = (props) => {
     );
 }
 
-export default toolbar;
+export default Toolbar;

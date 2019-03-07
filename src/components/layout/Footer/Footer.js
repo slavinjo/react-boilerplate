@@ -4,7 +4,7 @@ import './Footer.css';
 const footer = (props) => {
     return (
         <footer className="footer">
-            Ovo je lepi futer!
+            Footer...
         </footer>
     );
 }

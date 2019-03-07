@@ -18,11 +18,12 @@ class MainContent extends React.Component {
     }
 
     render() {
+        let sideBar = this.state.isSidebarVisible ? <SideDrawer visible={this.state.isSidebarVisible} /> : null ;
         return (
             <div style={{ height: '100%' }}>
-                <Toolbar handleClick={this.clickHandler} />
+                <Toolbar  handleClick={this.clickHandler} />
                 <Backdrop visible={this.state.isSidebarVisible} handleClick={this.clickHandler} />
-                <SideDrawer visible={this.state.isSidebarVisible} />
+                <SideDrawer visible={this.state.isSidebarVisible} handleClick={this.clickHandler} />
                 <Main />
                 <Footer handleClick={this.clickHandler} />
             </div>

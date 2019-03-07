@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Stuff.css';
 
-const Stuff = (props) => {
-    return (
-        <p>Stuff</p>
-    );
+class Stuff extends Component {
+    render() {
+        return (
+            <div>
+                <p>Stuff</p>
+                <button>Change name</button>
+            </div>
+        );
+    }
 }
 
 export default Stuff;
