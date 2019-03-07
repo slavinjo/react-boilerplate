@@ -5,6 +5,7 @@ const main = (props) => {
     return (
         <main className="main">
            <p>Neki paragraf</p>
+           {props.children}
         </main>
     );
 }
