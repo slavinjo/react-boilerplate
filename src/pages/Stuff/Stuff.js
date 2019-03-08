@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import {withRouter} from 'react-router';
+import { withRouter } from "react-router"; 
 
 import "./Stuff.css";
+import App from "../../App";
 
 class Stuff extends Component {
   state = {
@@ -9,10 +10,9 @@ class Stuff extends Component {
   };
 
   changeName = e => {
-    e.preventDefault();
-    this.setState({ buttonName: "New name" });
+    //App.ime = "2432432";
+    //this.forceUpdate();
   };
-
 
   render() {
     return (
@@ -20,10 +20,11 @@ class Stuff extends Component {
         <section>
           <p>Stuff</p>
         </section>
-        <button onClick={this.changeName}>{this.state.buttonName}</button>
+        <button onClick={this.changeName}>Change me</button>
       </div>
     );
   }
 }
 
+{/* withRouter needed because of redux? */}
 export default withRouter(Stuff);
