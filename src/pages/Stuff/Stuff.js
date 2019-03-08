@@ -1,15 +1,29 @@
-import React, { Component } from 'react';
-import './Stuff.css';
+import React, { Component } from "react";
+import {withRouter} from 'react-router';
+
+import "./Stuff.css";
 
 class Stuff extends Component {
-    render() {
-        return (
-            <div>
-                <p>Stuff</p>
-                <button>Change name</button>
-            </div>
-        );
-    }
+  state = {
+    buttonName: "Change name"
+  };
+
+  changeName = e => {
+    e.preventDefault();
+    this.setState({ buttonName: "New name" });
+  };
+
+
+  render() {
+    return (
+      <div>
+        <section>
+          <p>Stuff</p>
+        </section>
+        <button onClick={this.changeName}>{this.state.buttonName}</button>
+      </div>
+    );
+  }
 }
 
-export default Stuff;
+export default withRouter(Stuff);
