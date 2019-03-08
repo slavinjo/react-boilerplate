@@ -6,7 +6,7 @@ class Stuff extends Component {
         return (
             <div>
                 <p>Stuff</p>
-                <button>Change name f</button>
+                <button>Change name</button>
             </div>
         );
     }

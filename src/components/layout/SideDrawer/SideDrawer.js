@@ -1,6 +1,7 @@
 import React from 'react';
 import './SideDrawer.css'
 import { NavLink } from "react-router-dom";
+import * as ROUTES from '../../../constants/routes';
 
 const sideDrawer = props => {
     const visible = props.visible;
@@ -12,9 +13,9 @@ const sideDrawer = props => {
     return (
         <nav className={className}>
             <ul>
-                <li><NavLink to="/" onClick={props.handleClick}>Home</NavLink></li>
-                <li><NavLink to="/stuff" onClick={props.handleClick}>Stuff</NavLink></li>
-                <li><NavLink to="/contact" onClick={props.handleClick}>Contact</NavLink></li>
+                <li><NavLink to={ROUTES.HOME} onClick={props.handleClick}>Home</NavLink></li>
+                <li><NavLink to={ROUTES.STUFF} onClick={props.handleClick}>Stuff</NavLink></li>
+                <li><NavLink to={ROUTES.CONTACT} onClick={props.handleClick}>Contact</NavLink></li>
             </ul>
         </nav>
     );

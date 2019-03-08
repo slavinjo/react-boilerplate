@@ -2,6 +2,7 @@ import React from 'react';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import './Toolbar.css';
 import { NavLink } from "react-router-dom";
+import * as ROUTES from '../../../constants/routes';
 
 const Toolbar = (props) => {
     return (
@@ -14,9 +15,9 @@ const Toolbar = (props) => {
                 <div className="spacer"></div>
                 <div className="toolbar_navigation-items">
                     <ul>
-                        <li><NavLink to="/">Home</NavLink></li>
-                        <li><NavLink to="/stuff">Stuff</NavLink></li>
-                        <li><NavLink to="/contact">Contact</NavLink></li>
+                        <li><NavLink to={ROUTES.HOME}>Home</NavLink></li>
+                        <li><NavLink to={ROUTES.STUFF}>Stuff</NavLink></li>
+                        <li><NavLink to={ROUTES.CONTACT}>Contact</NavLink></li>
                     </ul>
                 </div>
             </nav>
