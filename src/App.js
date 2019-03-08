@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
 
-  static ime = 'aaa'
+  //static ime = 'aaa';
 
   render() {
     return (
