@@ -1,2 +1,2 @@
 export const CHANGE_NAME = 'CHANGE_NAME';
-export const GET_PHOTOS = 'GET_PHOTOS';
+export const DELETE_NAME = 'DELETE_NAME';

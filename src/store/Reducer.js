@@ -1,8 +1,9 @@
 import * as ActionTypes from './Actions';
 
 const initialState = {
-    name: '',
-    photos: null
+    buttonNameAdd: 0,
+    buttonNameSubtract: 0,
+    //  photos: null
 };
 
 const Reducer = (state = initialState, action) => {
@@ -10,10 +11,13 @@ const Reducer = (state = initialState, action) => {
         case ActionTypes.CHANGE_NAME:
             return {
                 ...state,
-                name: action.newName
+                buttonNameAdd: state.buttonNameAdd + action.counter
             };
-        case ActionTypes.GET_PHOTOS:
-            return {};
+        case ActionTypes.DELETE_NAME:
+            return {
+                ...state,
+                buttonNameSubtract: state.buttonNameSubtract - action.counter
+            };
         default:
             return state;
     }
