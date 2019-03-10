@@ -10,6 +10,14 @@ class Stuff extends Component {
   //  buttonName: 0
   //};
 
+  componentWillMount() {
+    // will trigger the callback function whenever a new Route renders a component(as long as this component stays mounted as routes change)
+    this.props.history.listen(() => {
+      // view new URL
+      console.log('New URL', this.props.history.location.pathname);
+    });
+  }
+
   changeNameAdd = e => {
     //App.ime = "2432432";
     //this.forceUpdate();
