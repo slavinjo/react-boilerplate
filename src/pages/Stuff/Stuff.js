@@ -10,7 +10,7 @@ class Stuff extends Component {
   };
 
   changeName = e => {
-    //App.ime = "2432432";
+    //App.ime = "2432432"; fdfsd
     //this.forceUpdate();
   };
 
