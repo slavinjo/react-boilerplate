@@ -20,11 +20,6 @@ class Stuff extends Component {
   };
 
   changeNameSubtract = e => {
-    //App.ime = "2432432";
-    //this.forceUpdate();
-    // mapStateToProps(e.target.value);
-    //e.dispatch( this.props.btnName);
-    // this.forceUpdate();
     this.props.changeNameSubtractor(1);
   };
 
