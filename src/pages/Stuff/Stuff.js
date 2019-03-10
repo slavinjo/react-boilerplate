@@ -33,7 +33,7 @@ class Stuff extends Component {
 
   resetName = e => {
     this.props.resetName();
-    this.props.history.push('/contact');
+    //this.props.history.push('/contact');
   };
 
 
