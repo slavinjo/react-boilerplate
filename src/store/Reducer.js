@@ -18,6 +18,12 @@ const Reducer = (state = initialState, action) => {
                 ...state,
                 buttonNameSubtract: state.buttonNameSubtract - action.counter
             };
+        case ActionTypes.RESET_NAMES:
+            return {
+                ...state,
+                buttonNameSubtract: 0,
+                buttonNameAdd: 0
+            };
         default:
             return state;
     }

@@ -23,6 +23,11 @@ class Stuff extends Component {
     this.props.changeNameSubtractor(1);
   };
 
+  resetName = e => {
+    this.props.resetName();
+  };
+
+
   render() {
     return (
       <div>
@@ -30,6 +35,7 @@ class Stuff extends Component {
           <p>Test Redux connection...</p>
         </section>
         <button onClick={this.changeNameAdd}>ADDER: {this.props.btnNameAdd}</button>
+        <button onClick={this.resetName}>RESET</button>
         <button onClick={this.changeNameSubtract}>SUBTRACTOR:{this.props.btnNameSubtract}</button>
       </div>
     );
@@ -46,7 +52,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     changeNameAdder: (number) => dispatch({ type: ActionTypes.CHANGE_NAME, counter: number }),
-    changeNameSubtractor: (number) => dispatch({ type: ActionTypes.DELETE_NAME, counter: number })
+    changeNameSubtractor: (number) => dispatch({ type: ActionTypes.DELETE_NAME, counter: number }),
+    resetName: () => dispatch({ type: ActionTypes.RESET_NAMES})
   }
 };
 
