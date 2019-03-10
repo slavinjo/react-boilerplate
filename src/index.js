@@ -7,6 +7,34 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import Reducer from './store/Reducer';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
+axios.defaults.headers.common['Authorization'] = 'AUTH TOKEN';
+axios.defaults.headers.common['Content-Type'] = 'application/json';
+
+axios.interceptors.request.use(
+    request => {
+        console.log(request);
+        return request;
+    },
+    error => {
+        console.log(error);
+        return Promise.reject(error);
+    }
+);
+
+axios.interceptors.response.use(
+    response => {
+        console.log(response);
+        return response;
+    },
+    error => {
+        console.log(error);
+        return Promise.reject(error);
+    }
+);
+
 
 const store = createStore(Reducer);
 

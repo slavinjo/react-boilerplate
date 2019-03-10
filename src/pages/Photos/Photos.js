@@ -1,10 +1,31 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router";
-import { connect } from "react-redux";
-import * as ActionTypes from '../../store/Actions';
+import axios from 'axios';
+
 import "./Photos.css";
 
 class Photos extends Component {
+
+  state = {
+    photos: null
+  }
+
+  componentDidMount() {
+    axios.get('/posts')
+      .then(
+        response => {
+          const posts = response.data.slice(0, 4);
+          const updatedPosts = posts.map(post => {
+            return {
+              ...post
+            }
+          })
+          this.setState({ photos: updatedPosts })
+        }
+      )
+      .catch(error => {
+        console.log(error);
+      });
+  };
 
   render() {
     return (
@@ -12,23 +33,10 @@ class Photos extends Component {
         <section>
           <p>Photos</p>
         </section>
-       
+        <div>{this.state.photos != null ? this.state.photos[0].title : null}</div>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => {
-  return {
-   
-  }
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-  
-  }
-};
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Photos));
+export default Photos;
