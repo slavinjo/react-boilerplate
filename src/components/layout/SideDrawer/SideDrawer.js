@@ -16,6 +16,7 @@ const sideDrawer = props => {
                 <li><NavLink to={ROUTES.HOME} onClick={props.handleClick}>Home</NavLink></li>
                 <li><NavLink to={ROUTES.STUFF} onClick={props.handleClick}>Stuff</NavLink></li>
                 <li><NavLink to={ROUTES.CONTACT} onClick={props.handleClick}>Contact</NavLink></li>
+                <li><NavLink to={ROUTES.PHOTOS} onClick={props.handleClick}>Photos</NavLink></li>
             </ul>
         </nav>
     );

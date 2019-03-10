@@ -18,6 +18,7 @@ const Toolbar = (props) => {
                         <li><NavLink to={ROUTES.HOME}>Home</NavLink></li>
                         <li><NavLink to={ROUTES.STUFF}>Stuff</NavLink></li>
                         <li><NavLink to={ROUTES.CONTACT}>Contact</NavLink></li>
+                        <li><NavLink to={ROUTES.PHOTOS}>Photos</NavLink></li>
                     </ul>
                 </div>
             </nav>
