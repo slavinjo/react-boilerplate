@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Gallery from 'react-grid-gallery';
+import Gallery from "react-grid-gallery";
+import { withRouter } from "react-router";
 
 import "./Photos.css";
 
@@ -127,12 +128,9 @@ class Photos extends Component {
     ]
   };
 
-
-  shouldComponentUpdate()
-  {
-    return false;
-  }
-
+  // shouldComponentUpdate() {
+  //   return false;
+  // }
 
   componentDidMount() {
     axios
@@ -154,15 +152,16 @@ class Photos extends Component {
   render() {
     return (
       <div>
-        {/* <section>
+        <section>
           <p>Photos</p>
+          <p>
+            {this.state.photos != null ? this.state.photos[0].title : null}
+          </p>
         </section>
-        <div>{this.state.photos != null ? this.state.photos[0].title : null}</div>
-         */}
-             <Gallery images={this.state.IMAGES}/>
+        <Gallery images={this.state.IMAGES} />
       </div>
     );
   }
 }
 
-export default Photos;
+export default withRouter(Photos);
