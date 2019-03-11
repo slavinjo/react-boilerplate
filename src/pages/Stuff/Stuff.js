@@ -8,6 +8,7 @@ class Stuff extends Component {
 
   //state = {
   //  buttonName: 0
+  //
   //};
 
   componentWillMount() {
