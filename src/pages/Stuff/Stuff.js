@@ -50,7 +50,7 @@ class Stuff extends Component {
           SUBTRACTOR:{this.props.btnNameSubtract}
         </button>
         <section>
-          <video id="background-video" loop autoPlay>
+          <video id="background-video" controls loop autoPlay>
             <source src={this.state.videoURL} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
