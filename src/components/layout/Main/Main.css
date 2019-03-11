@@ -5,4 +5,11 @@
     background: powderblue;
     width: 85%; 
     height: 85%;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none; 
+}
+
+.main::-webkit-scrollbar { 
+    display: none; 
 }
