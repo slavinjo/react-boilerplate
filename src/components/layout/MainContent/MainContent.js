@@ -2,7 +2,7 @@ import React from 'react';
 import Toolbar from '../Toolbar/Toolbar';
 import SideDrawer from '../SideDrawer/SideDrawer';
 import Backdrop from '../Backdrop/Backdrop';
-import Footer from '../Footer/Footer';
+
 import Main from '../Main/Main';
 
 class MainContent extends React.Component {
@@ -25,7 +25,7 @@ class MainContent extends React.Component {
                 <Backdrop visible={this.state.isSidebarVisible} handleClick={this.clickHandler} />
                 <SideDrawer visible={this.state.isSidebarVisible} handleClick={this.clickHandler} />
                 <Main />
-                <Footer handleClick={this.clickHandler} />
+            
             </div>
         )
     };
