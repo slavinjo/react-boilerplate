@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router";
 import { connect } from "react-redux";
 import * as ActionTypes from "../../store/Actions";
+import BaseButton from "../../components/util/BaseButton/BaseButton";
 import "./Stuff.css";
 
 class Stuff extends Component {
@@ -24,10 +25,12 @@ class Stuff extends Component {
     // mapStateToProps(e.target.value);
     //e.dispatch( this.props.btnName);
     // this.forceUpdate();
+    console.log("ZBRAJAM!");
     this.props.changeNameAdder(1);
   };
 
   changeNameSubtract = e => {
+    console.log("ODUZIMAM!");
     this.props.changeNameSubtractor(1);
   };
 
@@ -45,10 +48,16 @@ class Stuff extends Component {
         <button onClick={this.changeNameAdd}>
           ADDER: {this.props.btnNameAdd}
         </button>
-        <button onClick={this.resetName}>RESET</button>
-        <button onClick={this.changeNameSubtract}>
-          SUBTRACTOR:{this.props.btnNameSubtract}
-        </button>
+        <BaseButton
+          variant="contained"
+          color="primary"
+          onClick={this.resetName}
+        >
+          RESET
+        </BaseButton>
+        <BaseButton onClick={this.changeNameSubtract}>
+         Subtractor: {this.props.btnNameSubtract}
+        </BaseButton>
         <section>
           <video id="background-video" controls loop autoPlay>
             <source src={this.state.videoURL} type="video/mp4" />
