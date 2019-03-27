@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../Footer/Footer";
 import "./Main.css";
 
 import Home from "../../../pages/Home/Home";
@@ -24,9 +23,6 @@ const Main = props => {
           <Route path={ROUTES.PHOTOS} component={Photos} />
         </Switch>
       </main>
-
-    
-        <Footer />
    
     </>
   );
