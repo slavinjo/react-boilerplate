@@ -1,0 +1,15 @@
+.main{
+    position: fixed;
+    top:10%;
+    left: 7.8%;
+    background: powderblue;
+    width: 85%; 
+    height: 85%;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none; 
+}
+
+.main::-webkit-scrollbar { 
+    display: none; 
+}
